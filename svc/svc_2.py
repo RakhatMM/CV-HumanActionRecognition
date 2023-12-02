@@ -115,7 +115,6 @@ def plot_confusion_matrix(y_true, y_pred, class_names, label_order, title='Confu
     plt.show()
 
 
-# Your function definitions for load_vlad_data_and_labels and plot_confusion_matrix remain the same.
 
 def calculate_top_k_accuracy(y_true, y_scores, k):
     """Calculate the overall top-k accuracy."""
@@ -175,8 +174,6 @@ def main():
     print(class_names)
     plot_confusion_matrix(y_test, y_pred, class_names, label_order)
 
-    # Optionally, calculate and print top-k accuracies for each class
-    # ...
     num_classes = len(class_names)
     top1_accuracies = calculate_top_k_accuracy_per_class(y_test, y_scores, 1, num_classes)
     top3_accuracies = calculate_top_k_accuracy_per_class(y_test, y_scores, 3, num_classes)
